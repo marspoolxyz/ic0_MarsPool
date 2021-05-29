@@ -1,21 +1,33 @@
+import * as React from 'react';
+import { render } from 'react-dom';
+import ImageGallery from 'react-image-gallery';
+
 import { Actor, HttpAgent } from '@dfinity/agent';
 import { idlFactory as ic0_MarsPool_idl, canisterId as ic0_MarsPool_id } from 'dfx-generated/ic0_MarsPool';
 
 const agent = new HttpAgent();
 const ic0_MarsPool = Actor.createActor(ic0_MarsPool_idl, { agent, canisterId: ic0_MarsPool_id });
 
-// Insert these lines after the import statements for
-// importing an agent and an actor
-import * as React from 'react';
-import { render } from 'react-dom';
-
-// Replace the default index.js content with
-// React JavaScript
-class MyHello extends React.Component {
+const images = [
+  {
+    original: 'https://picsum.photos/id/1018/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1015/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1019/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+  },
+];
+// Modify the front-end in the React JavaScript
+class MarsPoolMain extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Name',
+      name: '',
       message: '',
     };
   }
@@ -31,22 +43,24 @@ class MyHello extends React.Component {
 
   render() {
     return (
+      <div style={{ "font-family": "sans-serif" }}>
       <div style={{ "font-size": "30px" }}>
-        <div style={{ "background-color": "yellow" }}>
-          <p>Greetings, from DFINITY!</p>
-          <p> Type your message in the Name input field, then click <b> Get Greeting</b> to display the result.</p>
-        </div>
+          <p>Welcome to MarsPool !</p>
+          <p> Enter your NFT Token ID :</p>
+
         <div style={{ "margin": "30px" }}>
-          <input id="name" value={this.state.name} onChange={ev => this.onNameChange(ev)}></input>
-          <button onClick={() => this.doGreet()}>Get Greeting!</button>
+          <input id="name" placeholder="Type text here" value={this.state.name} onChange={ev => this.onNameChange(ev)}></input>
+          <button onClick={() => this.doGreet()}>Reveal !</button>
         </div>
-        <div>Greeting is: "<span style={{ "color": "blue" }}>{this.state.message}</span>"</div>
+        <div>Your MarsPool LAND Art "<span style={{ "color": "green" }}>{this.state.message}</span>"</div>
       </div>
+      <ImageGallery items={images} />
+    </div>
     );
   }
 }
 
-render(<MyHello />, document.getElementById('app'));
+render(<MarsPoolMain />, document.getElementById('app'));
 
 /*
 document.getElementById("clickMeBtn").addEventListener("click", async () => {

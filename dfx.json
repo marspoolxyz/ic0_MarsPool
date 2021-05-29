@@ -1,7 +1,7 @@
 {
   "canisters": {
     "ic0_MarsPool": {
-      "main": "src/ic0_MarsPool/main.mo",
+      "main": "src/ic0_MarsPool/marspool_landnft.mo",
       "type": "motoko"
     },
     "ic0_MarsPool_assets": {
