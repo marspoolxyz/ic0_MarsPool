@@ -176,8 +176,8 @@ class MarsPoolMain extends React.Component {
       <Header></Header>
       <div style={{ "font-family": "sans-serif",color:"white" }}>
       <div style={{ "font-size": "30px",color:"white"}}>
-      <p>Welcome to MarsPool LAND NFT !</p>
-      <p> Powered by <img height="46" width="100" src="dfx.gif" alt="Dfinity" /></p>
+      <p>MarsPool LAND NFT Gallery</p>
+         <p>Powered by <img height="46" width="100" src="dfx.gif" style="display:inline" alt="Dfinity"/></p>
 {/*     
         <p>Enter your NFT Token ID :</p>
         <div style={{ "margin": "30px" }}>
