@@ -285,10 +285,12 @@ class MarsPoolMain extends React.Component {
 
   render() {
     return (
+      <div>
+      <Header></Header>
       <div style={{ "font-family": "sans-serif",color:"white" }}>
       <div style={{ "font-size": "30px",color:"white"}}>
       <p>Welcome to MarsPool LAND NFT !</p>
-      <p> Powered by Dfinity (The Internet Computer) & IPFS</p>
+      <p> Powered by <img height="50%" width="50%" src="dfx.gif" alt="Dfinity" /></p>
 {/*     
         <p>Enter your NFT Token ID :</p>
         <div style={{ "margin": "30px" }}>
@@ -298,8 +300,8 @@ class MarsPoolMain extends React.Component {
         <div>Your MarsPool LAND Art "<span style={{ "color": "green" }}>{this.state.message}</span>"</div>
  */}      
       </div>
-      <Header></Header>
       <ImageGallery items={images} />
+    </div>
     </div>
     );
   }

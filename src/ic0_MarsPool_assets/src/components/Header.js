@@ -6,17 +6,18 @@ class Header extends Component {
             <header>
             <div className="header_bot">
                 <div className="wrapper">
-                <div className="logo"><a href="index.html"><img src="logo.png" alt="logo" /></a></div>
+                <div className="logo"><
+                    a href="index.html"><img src="logo.png" alt="logo" /></a></div>
                 <div className="menu_area">
                     <div id="navigation">
                     <div id="navbtn">menu</div>
                     <ul id="menu-nenu" className="nav-menu">
-                        <li><a href="#INTRO">HOME</a></li>
-                        <li><a href="#BENEFITS">BENEFITS</a></li>
-                        <li><a href="#GALLERY">GALLERY</a></li>
-                        <li><a href="#SEED">SEED TOKEN</a></li>
-                        <li><a href="#WALLET">MY WALLET</a></li>
-                        <li><a href="#LIVE">LIVE SALE</a></li>
+                        <li><a href="http://dapp.marspool.xyz">HOME</a></li>
+                        <li><a href="http://dapp.marspool.xyz">BENEFITS</a></li>
+                        <li><a href="http://dapp.marspool.xyz">GALLERY</a></li>
+                        <li><a href="http://dapp.marspool.xyz">SEED TOKEN</a></li>
+                        <li><a href="http://dapp.marspool.xyz">MY WALLET</a></li>
+                        <li><a href="http://dapp.marspool.xyz">LIVE SALE</a></li>
                     </ul>
                     </div>
                 </div>
